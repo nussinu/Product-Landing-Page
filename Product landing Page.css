@@ -1,0 +1,130 @@
+:root {
+    --color-1: #93c83e;
+    --color-2: #058fcf;
+    --background-gradient: linear-gradient(135deg, #c4eb86, #96d1ec);
+    --button-color: #ff7f50;
+    --text-color: #333;
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    background: var(--background-gradient);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;   
+}
+
+header img {
+    width: 40px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+}
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#nav-bar ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    list-style: none;
+}
+
+#nav-bar ul li a {
+    text-decoration: none;
+    background-color: var(--color-1);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+#nav-bar ul li a:hover {
+    background-color: var(--color-2);
+}
+
+main {
+    margin-top: 30px;
+}
+
+.hero-section {
+    padding: 30px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+section {
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background: var(--color-1);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    body {
+        width: 95%;
+    }
+    
+    #nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
